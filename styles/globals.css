@@ -1,3 +1,8 @@
-@tailwind base;
+/* @tailwind base; */
 @tailwind components;
 @tailwind utilities;
+
+.mantine-AppShell-main {
+  padding-left: 16px;
+  padding-top: 16px;
+}
