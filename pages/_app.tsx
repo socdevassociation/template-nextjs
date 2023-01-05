@@ -1,6 +1,6 @@
 import { AppProps } from "next/app";
 import Head from "next/head";
-import { AppShell, Container, MantineProvider } from "@mantine/core";
+import { Flex, MantineProvider } from "@mantine/core";
 import "../styles/globals.css";
 import SDAFooter from "../components/Footer";
 import SDAHeader from "../components/Header";
@@ -24,20 +24,16 @@ export default function App(props: AppProps) {
         theme={{
           /** Put your mantine theme override here */
           colorScheme: "light",
-          components: {
-            Headers: {},
-          },
         }}
       >
-        <AppShell
-          footer={<SDAFooter></SDAFooter>}
-          header={<SDAHeader></SDAHeader>}
-          padding="md"
-        >
-          <Container>
+        <Flex direction="column" className="h-screen overflow-y-auto">
+          <SDAHeader></SDAHeader>
+          <div className="flex-1">
             <Component {...pageProps} />
-          </Container>
-        </AppShell>
+          </div>
+
+          <SDAFooter></SDAFooter>
+        </Flex>
       </MantineProvider>
     </>
   );

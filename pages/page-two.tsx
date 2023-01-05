@@ -1,7 +1,9 @@
+import { Container, Title } from "@mantine/core";
+
 export default function PageTwo() {
   return (
-    <div>
-      <h1>Page Two</h1>
-    </div>
+    <Container>
+      <Title>Page Two</Title>
+    </Container>
   );
 }
